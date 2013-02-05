@@ -9,6 +9,10 @@ A Responsive Images approach that you can use today, that mimics the [proposed p
 
 **Note:** Picturefill works best in browsers that support CSS3 media queries. It includes (externally) the [matchMedia polyfill](https://github.com/paulirish/matchMedia.js/) which makes matchMedia work in `media-query`-supporting browsers that don't have `matchMedia`, or at least allows media types to be tested in most any browser. `matchMedia` and the `matchMedia` polyfill are not required for `picturefill` to work, but they are required to support the `media` attributes on `picture` `source` elements.
 
+## Changes in this fork
+
+Added support for data-width and data-height on `div[data-picture]` elements. This way you may have the same effect as with a `background-size` CSS rule, but only having to modify HTML.
+
 ## Size and delivery
 
 Currently, `picturefill.js` compresses to around 498bytes (~0.5kb), after minify and gzip. To minify, you might try these online tools: [Uglify]:(http://marijnhaverbeke.nl/uglifyjs), [Yahoo Compressor]:(http://refresh-sf.com/yui/), or [Closure Compiler](http://closure-compiler.appspot.com/home). Serve with gzip compression.

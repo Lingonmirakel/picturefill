@@ -27,10 +27,19 @@
 			// Find any existing img element in the picture element
 			var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
 
-			if( matches.length ){			
+			if( matches.length ){
 				if( !picImg ){
 					picImg = w.document.createElement( "img" );
 					picImg.alt = ps[ i ].getAttribute( "data-alt" );
+					
+					if (ps[ i ].getAttribute( "data-width" ) !== null) {
+						picImg.width = ps[ i ].getAttribute( "data-width" );
+					}
+					
+					if (ps[ i ].getAttribute( "data-height" ) !== null) {
+						picImg.height = ps[ i ].getAttribute( "data-height" );
+					}
+
 					ps[ i ].appendChild( picImg );
 				}
 				
